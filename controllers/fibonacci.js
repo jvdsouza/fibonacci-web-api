@@ -1,7 +1,8 @@
 const fibonacciCall = (req, resp) => {
+    console.log(req.body);
+    
     const {numInput} = req.body;
     // console.log(numInput);
-    
     
     if (!numInput || isNaN(Number(numInput)) || typeof numInput === 'undefined' || numInput === null) {
         return resp.status(400).json('incorrect value submitted');
