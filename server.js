@@ -6,7 +6,7 @@ const cors = require('cors');
 const fibonacci = require('./controllers/fibonacci');
 
 const app = express();
-const port = 3001;
+const port = process.env.port;
 
 app.use(bodyParser.json());
 app.use(cors());
